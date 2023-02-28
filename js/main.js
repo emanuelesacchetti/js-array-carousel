@@ -22,8 +22,43 @@ for ( let i = 0; i < imgList.length; i++) {
     
     
 }
+
+imagePosition = 0
+
 let divImageWrapper = document.getElementsByClassName('image-wrapper');
-divImageWrapper[0].classList.add('d-block');
+divImageWrapper[imagePosition].classList.add('d-block');
+
+const btnUpDom = document.querySelector('#up');
+const btnDownDom = document.querySelector('#down');
 
 
-console.log(divImageWrapper)
+btnUpDom.addEventListener('click', 
+    function () {
+        if(imagePosition < imgList.length - 1){
+            divImageWrapper[imagePosition].classList.remove('d-block');
+            
+            imagePosition++;
+
+            divImageWrapper[imagePosition].classList.add('d-block');
+
+            if(imagePosition == divImageWrapper.length -1){
+                btnUpDom.classList.add('hide');
+            }
+        }
+
+    }
+
+)
+btnDownDom.addEventListener('click', 
+    function () {
+        if(imagePosition > 0){
+            divImageWrapper[imagePosition].classList.remove('d-block');
+            imagePosition--;
+            divImageWrapper[imagePosition].classList.add('d-block');
+
+            btnUpDom.classList.remove('hide');
+
+        }
+    }
+
+)

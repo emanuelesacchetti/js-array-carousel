@@ -32,6 +32,9 @@
 .image-wrapper.d-block {
     display: block;
 }
+.btn.hide {
+    display: none;
+}
 
 .btn {
     width: 35px;
@@ -46,6 +49,7 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    cursor: pointer;
 }
 .btn-up {
     top: 10px;
