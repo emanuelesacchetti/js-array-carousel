@@ -23,13 +23,13 @@
     display: none;
 }
 
-.image-wrapper img {
+.image {
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
 
-.d-block {
+.image-wrapper.d-block {
     display: block;
 }
 

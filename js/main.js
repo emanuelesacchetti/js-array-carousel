@@ -11,20 +11,19 @@ let imgList = [
 ];
 
 const carouselDom = document.querySelector('#carousel');
-
-
+let imageDom = document.querySelectorAll('.image');
 
 for ( let i = 0; i < imgList.length; i++) {
     const imageWrapper = `<div class="image-wrapper">
-                                <img src="${imgList[i]}" alt="">
+                                <img class="image" src="${imgList[i]}" alt="">
                         </div>`;
-
-    
     
     carouselDom.innerHTML += imageWrapper;
     
+    
 }
+let divImageWrapper = document.getElementsByClassName('image-wrapper');
+divImageWrapper[0].classList.add('d-block');
 
 
-
-
+console.log(divImageWrapper)
