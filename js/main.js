@@ -10,8 +10,9 @@ let imgList = [
     'img/05.webp'
 ];
 
-const carouselDom = document.getElementsByClassName('carousel');
-let imageWrapper = '';
+const carouselDom = document.querySelector('#carousel');
+
+
 
 for ( let i = 0; i < imgList.length; i++) {
     const imageWrapper = `<div class="image-wrapper">
@@ -19,6 +20,11 @@ for ( let i = 0; i < imgList.length; i++) {
                         </div>`;
 
     
-    console.log(imageWrapper);
+    
+    carouselDom.innerHTML += imageWrapper;
+    
 }
-carouselDom.innerHTML += imageWrapper;
+
+
+
+
