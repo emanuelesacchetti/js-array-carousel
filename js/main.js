@@ -32,37 +32,55 @@ const btnUpDom = document.querySelector('#up');
 const btnDownDom = document.querySelector('#down');
 
 
-btnUpDom.addEventListener('click', 
+btnUpDom.addEventListener('click',                         //A SALIRE
     function () {
-        if(imagePosition < imgList.length - 1){
+        if(imagePosition < divImageWrapper.length - 1){     //dalla 1° alla penultima img
             divImageWrapper[imagePosition].classList.remove('d-block');
-            
+            //posizione x nella lista dei wrapper
             imagePosition++;
-
+            //aggiungo 1
             divImageWrapper[imagePosition].classList.add('d-block');
-
+            //posizione x+1
             btnDownDom.classList.remove('hide');
 
-            if(imagePosition == divImageWrapper.length -1){
-                btnUpDom.classList.add('hide');
-            }
+        } else if(imagePosition = divImageWrapper.length - 1){                //ultima posizione
+            divImageWrapper[imagePosition].classList.remove('d-block');
+            //ultima posizione nella lista dei wrapper
+            imagePosition = 0
+            //posizione dell x uguale alla penultima posizone della lista wrapper
+            divImageWrapper[imagePosition].classList.add('d-block');
+            //penultima posizione nella lista dei wrapper
+
+            
         }
 
     }
 
 )
-btnDownDom.addEventListener('click', 
+btnDownDom.addEventListener('click',                  //A SCENDERE
     function () {
-        if(imagePosition > 0){
+        
+        
+        if(imagePosition > 0){                   //dalla seconda all'ultima
             divImageWrapper[imagePosition].classList.remove('d-block');
+            //posizione x nella lista dei wrapper
             imagePosition--;
+            // -1
             divImageWrapper[imagePosition].classList.add('d-block');
+            //posizione x-1
 
             btnUpDom.classList.remove('hide');
 
-            if(imagePosition == 0) {
-                btnDownDom.classList.add('hide');
-            }
+            
+        } else if(imagePosition == 0){                //la 1°
+            divImageWrapper[imagePosition].classList.remove('d-block');
+            //posizione x nella lista dei wrapper
+            imagePosition = divImageWrapper.length - 1
+            //posizione dell x uguale all'ultima posizone della lista wrapper
+            divImageWrapper[imagePosition].classList.add('d-block');
+            //ultima posizione nella lista dei wrapper
+
+            
         }
     }
 

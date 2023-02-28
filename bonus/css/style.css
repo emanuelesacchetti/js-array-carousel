@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70vw;
+    margin: 50px auto;
+    height: 80vh;
+}
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+#carousel {
+    height: 100%;
+    background-color: yellow;
+}
+.image-wrapper {
+    height: 100%;
+    display: none;
+}
+
+.image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.image-wrapper.d-block {
+    display: block;
+}
+.btn.hide {
+    display: none;
+}
+
+.btn {
+    width: 35px;
+    height: 35px;
+    background-color: gray;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn-up {
+    top: 10px;
+}
+.btn-down {
+    bottom: 10px;
+}
