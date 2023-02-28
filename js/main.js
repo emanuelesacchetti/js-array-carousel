@@ -41,6 +41,8 @@ btnUpDom.addEventListener('click',
 
             divImageWrapper[imagePosition].classList.add('d-block');
 
+            btnDownDom.classList.remove('hide');
+
             if(imagePosition == divImageWrapper.length -1){
                 btnUpDom.classList.add('hide');
             }
@@ -58,6 +60,9 @@ btnDownDom.addEventListener('click',
 
             btnUpDom.classList.remove('hide');
 
+            if(imagePosition == 0) {
+                btnDownDom.classList.add('hide');
+            }
         }
     }
 
